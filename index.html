@@ -1,0 +1,30 @@
+
+أفهم الآن! إذا كنت ترغب في أن يظهر موقع المستخدم (الذي وافق على مشاركة موقعه) مباشرة لك في موقعك (على صفحتك) عند الضغط على "احصل على موقعي"، فيمكنك استخدام Geolocation API لطلب موقع المستخدم وعرضه على صفحتك.
+
+الكود المطلوب:
+HTML: يعرض الزر لطلب الموقع.
+JavaScript: يستخدم Geolocation API للحصول على الموقع وعرضه لك على صفحتك.
+الكود الكامل:
+1. HTML:
+html
+Copy code
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الموقع الجغرافي</title>
+</head>
+<body>
+    <h2>اضغط للحصول على موقعي:</h2>
+    <button onclick="getLocation()">احصل على موقعي</button>
+    
+    <h3>موقعك الجغرافي:</h3>
+    <p id="location">موقعك سيظهر هنا...</p>
+
+    <div id="map" style="width: 100%; height: 400px;"></div> <!-- خريطة لعرض الموقع -->
+
+    <script src="script.js"></script>
+</body>
+</html>
